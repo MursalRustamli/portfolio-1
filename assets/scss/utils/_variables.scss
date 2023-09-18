@@ -1,0 +1,38 @@
+$primary-color:#8ab92d;
+$secondary-color:rgba(4, 9, 30, 0.8);
+$light-color:#ffffff;
+$dark-color:#222222;
+$gray-color:#777777;
+$start-color:#ffa500;
+$dark-gray-color:#191919;
+$dark-bg:#04091e;
+$footer-text-color:#707066;
+$max-width:1200px;
+
+.container {
+    max-width: $max-width;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.scroll {
+    background-color: $secondary-color;
+    position: fixed;
+    width: 100vw;
+    left: 0;
+    top:0;
+    transition: 500ms;
+    z-index: 1000;
+}
+
+.nav-scroll-bg {
+    background-color: $secondary-color;
+}
+
+.nav-scroll-height {
+    height: auto !important;
+}
+
+.active {
+    color:$primary-color;
+}

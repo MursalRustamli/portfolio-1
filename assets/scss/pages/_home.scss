@@ -1,0 +1,214 @@
+main {
+  #portfolio {
+    .container {
+      display: flex;
+      flex-direction: column;
+      // Portfolio Title
+
+      .portfolio-title {
+        margin: 100px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        h2 {
+          font-size: 4rem;
+          font-weight: 500;
+          text-align: center;
+        }
+        h4 {
+          font-size: 1.5rem;
+          color: $gray-color;
+          font-weight: 400;
+          margin-bottom: 50px;
+          text-align: center;
+        }
+        .portfolio-list {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-wrap: wrap;
+          gap: 20px;
+
+          li {
+            font-size: 1.4rem;
+            transition: 300ms;
+            margin: 10px 10px;
+            position: relative;
+            &:hover {
+              color: $primary-color;
+              cursor: pointer;
+            }
+            &::after {
+              content: "";
+              position: absolute;
+              width: 100%;
+              transform: scaleX(0);
+              height: 2px;
+              bottom: 0;
+              left: 0;
+              background-color: $primary-color;
+              transform-origin: bottom right;
+              transition: transform 0.25s ease-out;
+            }
+
+            &:hover::after {
+              transform: scaleX(1);
+              transform-origin: bottom left;
+            }
+          }
+        }
+      }
+
+      // Portfolio Carts
+
+      .portfolio-carts {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 3%;
+        .portfolio-cart {
+          text-align: center;
+          h3 {
+            margin: 10px 0;
+          }
+          p {
+            margin-bottom: 10px;
+          }
+        }
+      }
+
+      // Portfolio Jobs
+
+      .portfolio-jobs {
+        position: relative;
+        .portfolio-jobs-title {
+          height: 400px;
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          align-items: center;
+          justify-content: center;
+          background: url("/assets/img/Jobs-bg.webp") center no-repeat;
+          border-radius: 10px;
+          width: 100%;
+          z-index: -1;
+          h2 {
+            font-size: 3.5rem;
+            color: $light-color;
+            text-align: center;
+            z-index: 2000;
+          }
+          p {
+            color: $gray-color;
+            z-index: 2000;
+            margin-top: 50px;
+          }
+          div {
+            background-color: $secondary-color;
+            height: 100%;
+            width: 100%;
+            z-index: 1000;
+            position: absolute;
+            border-radius: 10px;
+          }
+        }
+        .portfolio-jobs-carts {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          text-align: center;
+          z-index: 2000;
+          gap: 3%;
+          margin-top: 300px;
+          div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            background-color: $light-color;
+            border-radius: 10px;
+            height: 250px;
+            box-shadow: $primary-color 0px 5px 15px;
+            img {
+              height: 70px;
+              width: 70px;
+            }
+          }
+        }
+      }
+
+      @media (max-width: 576px) {
+        .portfolio-jobs {
+          .portfolio-jobs-carts {
+            grid-template-columns: 1fr;
+          }
+        }
+      }
+    }
+  }
+
+  #customers {
+    .container {
+      .customers-title {
+        text-align: center;
+        padding: 70px 0;
+        h2 {
+          font-size: 3rem;
+        }
+        h3 {
+          font-size: 1.4rem;
+          color: $gray-color;
+          font-weight: 400;
+        }
+      }
+      .customers-carts {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 3%;
+        .customer-cart {
+          width: 100%;
+          img {
+            height: 70px;
+            width: 70px;
+          }
+          .customer-cart-user {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 10px 0;
+            p {
+              font-size: 2rem;
+              font-weight: 700;
+            }
+            .customer-cart-stars {
+              font-size: 1.5rem;
+              color: $start-color;
+              i {
+                &:last-child {
+                  color: $gray-color;
+                }
+              }
+            }
+          }
+          p {
+            color: $gray-color;
+            font-size: 1.4rem;
+            text-align:left;
+          }
+        }
+      }
+      @media (max-width:576px) {
+        .customers-carts {
+          grid-template-columns: 1fr;
+        }
+      }
+    }
+    
+  }
+  
+}

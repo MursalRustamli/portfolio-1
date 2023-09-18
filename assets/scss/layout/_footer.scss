@@ -1,0 +1,90 @@
+#footer {
+  background-color: $dark-bg;
+  margin: 2rem 0;
+  padding: 100px;
+  .container {
+    display: flex;
+gap: 30px;
+    // Footer About
+
+    .footer-about {
+      h3 {
+        font-size: 2.5rem;
+        color: #fff;
+      }
+      p {
+        color: $footer-text-color;
+        font-size: 1.3rem;
+        margin: 30px 0;
+      }
+    }
+
+    // Footer Newletter
+
+    .footer-newletter {
+      h3 {
+        font-size: 2.5rem;
+        color: #fff;
+      }
+      p {
+        color: $footer-text-color;
+        margin: 5% 0;
+      }
+      .footer-newletter-email {
+        display: flex;
+        input {
+          background-color: $dark-gray-color;
+          border: none;
+          color: $primary-color;
+          height: 40px;
+          padding: 0 2rem;
+          width: 100%;
+        }
+        .footer-btn {
+          background-color: $primary-color;
+          color: $light-color;
+          border: none;
+          width: 40px;
+          height: 40px;
+          cursor: pointer;
+        }
+      }
+    }
+
+    // Footer Newletter
+
+    .footer-follow {
+      width: 20%;
+      h3 {
+        color: #fff;
+        font-size: 2.5rem;
+      }
+      p {
+        color: $footer-text-color;
+        margin: 2rem 0;
+      }
+      .footer-socialmedia {
+        display: flex;
+        gap: 10px;
+        color: #fff;
+        i {
+          font-size: 2rem;
+          &:hover {
+            color: $primary-color;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 767px) {
+    margin-top: 100px;
+    padding: 40px;
+    .container {
+        gap: 50px;
+      flex-direction: column;
+    }
+  }
+  @media (max-width: 576px) {
+    padding: 30px;
+  }
+}
